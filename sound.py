@@ -2,20 +2,21 @@
 # -*- coding: utf-8 -*-
 # http://elecrow.com/
 
-import RPi.GPIO as GPIO
 import time
 
+import RPi.GPIO as GPIO
+
 # define sound pin
-sound_pin = 18
+SOUND_PIN = 18
 # set GPIO mode to GPIO.BOARD
 GPIO.setmode(GPIO.BOARD)
 # setup pin as INPUT
-GPIO.setup(sound_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(SOUND_PIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 try:
     while True:
         # check if sound detected or not
-        if(GPIO.input(sound_pin)==GPIO.LOW):
+        if GPIO.input(SOUND_PIN) == GPIO.LOW:
             print('Sound Detected')
             time.sleep(0.1)
 except KeyboardInterrupt:

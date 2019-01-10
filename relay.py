@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*-
 # http://elecrow.com/
 
-import RPi.GPIO as GPIO
 import time
+
+import RPi.GPIO as GPIO
 
 # define relay pin
 relay_pin = 40

@@ -3,20 +3,21 @@
 # http://elecrow.com/
 
 import time
+
 import RPi.GPIO as GPIO
 
 # define tilt pin
-tilt_pin = 15
+TILT_PIN = 15
 
 # set GPIO mode to GPIO.BOARD
 GPIO.setmode(GPIO.BOARD)
 # set puin as input
-GPIO.setup(tilt_pin, GPIO.IN)
+GPIO.setup(TILT_PIN, GPIO.IN)
 
 try:
     while True:
         # positive is tilt to left negative is tilt to right
-        if GPIO.input(tilt_pin):
+        if GPIO.input(TILT_PIN):
             print("[-] Left Tilt")
         else:
             print("[-] Right Tilt")

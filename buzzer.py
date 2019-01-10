@@ -2,18 +2,19 @@
 # -*- coding: utf-8 -*-
 # http://elecrow.com/
 
-import RPi.GPIO as GPIO
 import time
 
-buzzer_pin = 12
+import RPi.GPIO as GPIO
+
+BUZZER_PIN = 12
 
 GPIO.setmode(GPIO.BOARD)
-GPIO.setup(buzzer_pin, GPIO.OUT)
+GPIO.setup(BUZZER_PIN, GPIO.OUT)
 
 # Make buzzer sound
-GPIO.output(buzzer_pin, GPIO.HIGH)
+GPIO.output(BUZZER_PIN, GPIO.HIGH)
 time.sleep(0.5)
 # Stop buzzer sound
-GPIO.output(buzzer_pin, GPIO.LOW)
+GPIO.output(BUZZER_PIN, GPIO.LOW)
 
 GPIO.cleanup()

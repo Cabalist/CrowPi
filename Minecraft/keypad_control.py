@@ -1,6 +1,5 @@
-from mcpi.minecraft import Minecraft
 import RPi.GPIO as GPIO
-import time
+from mcpi.minecraft import Minecraft
 
 # store the GPIO control pins
 UP_PIN = 37
@@ -21,14 +20,14 @@ GPIO.setup(RIGHT_PIN, GPIO.IN)
 mc = Minecraft.create()
 
 while True:
-    x,y,z = mc.player.getPos()
-    if(GPIO.input(UP_PIN) == 0):
-        mc.player.setPos(x-0.1, y, z+0.1)
-        print "Moving up ..."
-    if(GPIO.input(DOWN_PIN) == 0):
-        mc.player.setPos(x+0.1, y, z-0.1)
-        print "Moving down ..."
-    if(GPIO.input(LEFT_PIN) == 0):
-        print "Moving left ..."
-    if(GPIO.input(RIGHT_PIN) == 0):
-        print "Moving right ..."
+    x, y, z = mc.player.getPos()
+    if GPIO.input(UP_PIN) == 0:
+        mc.player.setPos(x - 0.1, y, z + 0.1)
+        print("Moving up ...")
+    if GPIO.input(DOWN_PIN) == 0:
+        mc.player.setPos(x + 0.1, y, z - 0.1)
+        print("Moving down ...")
+    if GPIO.input(LEFT_PIN) == 0:
+        print("Moving left ...")
+    if GPIO.input(RIGHT_PIN) == 0:
+        print("Moving right ...")

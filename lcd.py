@@ -3,11 +3,12 @@
 
 # Example using a character LCD backpack.
 import time
+
 import Adafruit_CharLCD as LCD
 
 # Define LCD column and row size for 16x2 LCD.
-lcd_columns = 16
-lcd_rows    = 2
+LCD_COLUMNS = 16
+LCD_ROWS = 2
 
 # Initialize the LCD using the pins
 lcd = LCD.Adafruit_CharLCDBackpack(address=0x21)
@@ -44,10 +45,10 @@ try:
     lcd.clear()
     message = 'Scroll'
     lcd.message(message)
-    for i in range(lcd_columns-len(message)):
+    for i in range(LCD_COLUMNS - len(message)):
         time.sleep(0.5)
         lcd.move_right()
-    for i in range(lcd_columns-len(message)):
+    for i in range(LCD_COLUMNS - len(message)):
         time.sleep(0.5)
         lcd.move_left()
 

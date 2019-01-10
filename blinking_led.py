@@ -6,22 +6,22 @@ import time
 import RPi.GPIO as GPIO
 
 # define LED pin
-led_pin = 37
+LED_PIN = 37
 
 # set GPIO mode to GPIO.BOARD
 GPIO.setmode(GPIO.BOARD)
-# set puin as input
-GPIO.setup(led_pin, GPIO.OUT)
+# set pin as output
+GPIO.setup(LED_PIN, GPIO.OUT)
 
 try:
     while True:
         # turn on LED
-        GPIO.output(led_pin, GPIO.HIGH)
-        # Wait half a second
+        GPIO.output(LED_PIN, GPIO.HIGH)
+        # Wait
         time.sleep(0.2)
         # turn off LED
-        GPIO.output(led_pin, GPIO.LOW)
-        # Wait half a second
+        GPIO.output(LED_PIN, GPIO.LOW)
+        # Wait
         time.sleep(0.2)
 except KeyboardInterrupt:
     # CTRL+C detected, cleaning and quitting the script

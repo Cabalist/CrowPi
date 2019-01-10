@@ -3,27 +3,26 @@
 # http://elecrow.com/
 
 import RPi.GPIO as GPIO
-import time
 
 # configure both button and buzzer pins
-button_pin = 37
-buzzer_pin = 12
+BUTTON_PIN = 37
+BUZZER_PIN = 12
 
 # set board mode to GPIO.BOARD
 GPIO.setmode(GPIO.BOARD)
 
-# setup button pin asBu input and buzzer pin as output
-GPIO.setup(button_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-GPIO.setup(buzzer_pin, GPIO.OUT)
+# setup button pin as input and buzzer pin as output
+GPIO.setup(BUTTON_PIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(BUZZER_PIN, GPIO.OUT)
 
 try:
     while True:
         # check if button pressed
-        if(GPIO.input(button_pin) == 0):
+        if GPIO.input(BUTTON_PIN) == 0:
             # set buzzer on
-            GPIO.output(buzzer_pin, GPIO.HIGH)
+            GPIO.output(BUZZER_PIN, GPIO.HIGH)
         else:
             # it's not pressed, set button off
-            GPIO.output(buzzer_pin, GPIO.LOW)
+            GPIO.output(BUZZER_PIN, GPIO.LOW)
 except KeyboardInterrupt:
     GPIO.cleanup()
