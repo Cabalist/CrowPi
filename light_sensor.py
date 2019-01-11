@@ -8,13 +8,13 @@
 import time
 
 import RPi.GPIO as GPIO
-import smbus
+import smbus2
 
 # Find the right revision for bus driver
 if GPIO.RPI_REVISION == 1:
-    bus = smbus.SMBus(0)
+    bus = smbus2.SMBus(0)
 else:
-    bus = smbus.SMBus(1)
+    bus = smbus2.SMBus(1)
 
 
 class LightSensor(object):
@@ -50,7 +50,7 @@ class LightSensor(object):
         return (data[1] + (256 * data[0])) / 1.2
 
     def readLight(self):
-        data = bus.read_i2c_block_data(self.DEVICE, self.ONE_TIME_HIGH_RES_MODE_1)
+        data = bus.read_i2c_block_data(self.DEVICE, self.ONE_TIME_HIGH_RES_MODE_1, 32)
         return self.convertToNumber(data)
 
 
