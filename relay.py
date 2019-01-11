@@ -15,9 +15,11 @@ GPIO.setmode(GPIO.BOARD)
 GPIO.setup(relay_pin, GPIO.OUT)
 
 # Open Relay
+print("Opening relay...")
 GPIO.output(relay_pin, GPIO.LOW)
 # Wait half a second
-time.sleep(0.5)
+time.sleep(1)
 # Close Relay
+print("Closing relay...")
 GPIO.output(relay_pin, GPIO.HIGH)
 GPIO.cleanup()
