@@ -21,21 +21,21 @@ try:
     lcd.message('Hello\nworld!')
 
     # Wait 5 seconds
-    time.sleep(5.0)
+    time.sleep(5)
 
     # Demo showing the cursor.
     lcd.clear()
     lcd.show_cursor(True)
     lcd.message('Show cursor')
 
-    time.sleep(5.0)
+    time.sleep(5)
 
     # Demo showing the blinking cursor.
     lcd.clear()
     lcd.blink(True)
     lcd.message('Blink cursor')
 
-    time.sleep(5.0)
+    time.sleep(5)
 
     # Stop blinking and showing cursor.
     lcd.show_cursor(False)
@@ -54,18 +54,26 @@ try:
 
     # Demo turning backlight off and on.
     lcd.clear()
-    lcd.message('Flash backlight\nin 5 seconds...')
-    time.sleep(5.0)
+
+    for i in range(5, 0, -1):
+        lcd.message('Flash backlight\nin {} seconds...'.format(i))
+        time.sleep(1)
+        lcd.clear()
+
     # Turn backlight off.
     lcd.set_backlight(1)
-    time.sleep(2.0)
+    time.sleep(2)
+
     # Change message.
     lcd.clear()
     lcd.message('Goodbye!')
+    time.sleep(1)
+
     # Turn backlight on.
     lcd.set_backlight(0)
+
     # Turn backlight off.
-    time.sleep(2.0)
+    time.sleep(2)
     lcd.clear()
     lcd.set_backlight(1)
 except KeyboardInterrupt:
