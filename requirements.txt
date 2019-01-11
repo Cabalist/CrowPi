@@ -1,0 +1,12 @@
+# Latest versions of Adafruit libraries to fix bugs and allow Py3 compatibility
+-e git+git://github.com/adafruit/Adafruit_Python_CharLCD.git#egg=Adafruit_Python_CharLCD
+-e git+git://github.com/adafruit/Adafruit_Python_LED_Backpack.git#egg=Adafruit_Python_LED_Backpack
+
+
+Adafruit_DHT  # Temp/Humidity
+luma.led_matrix # LED Matrix
+mcpi  # Minecraft interface
+pi-rc522 # RFID Reader
+python-lirc # IR Reader
+RPi.GPIO # GPIO Pins support
+smbus2 # Light sensor
