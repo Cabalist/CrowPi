@@ -17,12 +17,10 @@ lcd = LCD.Adafruit_CharLCDBackpack(address=0x21)
 segment = SevenSegment.SevenSegment(address=0x70)
 segment.begin()
 
-TONE_PIN = 12
+TONE_PIN = 18
 
-GPIO.setmode(GPIO.BOARD)
 GPIO.setup(TONE_PIN, GPIO.IN)
 GPIO.setup(TONE_PIN, GPIO.OUT)
-p = GPIO.PWM(TONE_PIN, 100)
 
 # setup the LCD for merry xmas
 lcd.set_backlight(0)
