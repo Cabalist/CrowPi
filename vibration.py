@@ -6,6 +6,8 @@ import time
 
 import RPi.GPIO as GPIO
 
+# TODO Does not work in Py2/Py3
+
 # define vibration pin
 VIBRATION_PIN = 13
 

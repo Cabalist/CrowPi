@@ -4,6 +4,8 @@
 # Original Author Github: https://github.com/ludwigschuster/RasPi-GPIO-Stepmotor
 # http://elecrow.com/
 
+# TODO Does not work in Py2/Py3
+
 import math
 import time
 

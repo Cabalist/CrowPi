@@ -4,6 +4,8 @@
 # Original Author Github: https://github.com/WindVoiceVox/Raspi_SG90
 # http://elecrow.com/
 
+# TODO Does not work in Py2/Py3
+
 import time
 
 import RPi.GPIO as GPIO

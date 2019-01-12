@@ -6,6 +6,28 @@ import time
 
 from pirc522 import RFID
 
+# TODO Needs testing
+# TODO Prints an error:
+# SAMPLE OUTPUT:
+#   Starting
+#
+#   Detected: 10
+#   Card read UID: 130,8,5,60
+#   Setting tag
+#   Selecting UID [130, 8, 5, 60, 179]
+#
+#   Authorizing
+#   Changing used auth key to [116, 0, 82, 53, 0, 255] using method B
+#
+#   Reading
+#   Calling card_auth on UID [130, 8, 5, 60, 179]
+#   E2
+#   Error on S1B0
+#
+#   Deauthorizing
+#   Changing auth key and method to None
+
+
 run = True
 rdr = RFID()
 util = rdr.util()

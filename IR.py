@@ -5,6 +5,8 @@ from array import array
 import RPi.GPIO as GPIO
 import lirc
 
+# TODO Needs testing
+
 GPIO.setmode(11)
 GPIO.setup(17, 0)
 GPIO.setup(18, 0)
@@ -15,7 +17,8 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 Lirc = lirc.init("keys")
 
 
-# lirc.set_blocking(False, Lirc)		# Un-Comment to stop nextcode() from waiting for a signal ( will return empty array when no key is pressed )
+# Un-Comment to stop nextcode() from waiting for a signal ( will return empty array when no key is pressed )
+# lirc.set_blocking(False, Lirc)
 
 def handler(signal, frame):
     s.close()

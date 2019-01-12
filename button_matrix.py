@@ -8,6 +8,8 @@ import time
 
 import RPi.GPIO as GPIO
 
+# TODO BUG Buttons are mapped backwards
+# TODO Cleanup
 
 class ButtonMatrix():
 
