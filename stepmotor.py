@@ -4,7 +4,7 @@
 # Original Author Github: https://github.com/ludwigschuster/RasPi-GPIO-Stepmotor
 # http://elecrow.com/
 
-# TODO Does not work in Py2/Py3
+# NOTE: Make sure dipswitches 3-6 are set to on.
 
 import math
 import time

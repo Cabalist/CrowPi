@@ -4,7 +4,7 @@
 # Original Author Github: https://github.com/WindVoiceVox/Raspi_SG90
 # http://elecrow.com/
 
-# TODO Does not work in Py2/Py3
+# NOTE: Make sure dipswitches 7-8 are set to on.
 
 import time
 

@@ -6,7 +6,7 @@ import time
 
 import RPi.GPIO as GPIO
 
-# TODO Does not work in Py2/Py3
+# NOTE: Make sure dipswitch 2 is set to on.
 
 # define tilt pin
 TILT_PIN = 15

@@ -6,7 +6,7 @@ import time
 
 import RPi.GPIO as GPIO
 
-# TODO Does not work in Py2/Py3
+# NOTE: Make sure dipswitch 1 is set to on.
 
 # define vibration pin
 VIBRATION_PIN = 13
@@ -19,8 +19,8 @@ GPIO.setup(VIBRATION_PIN, GPIO.OUT)
 
 # turn on vibration
 GPIO.output(VIBRATION_PIN, GPIO.HIGH)
-# wait half a second
-time.sleep(0.5)
+# wait
+time.sleep(2)
 # turn off vibration
 GPIO.output(VIBRATION_PIN, GPIO.LOW)
 # cleaup GPIO
