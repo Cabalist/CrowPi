@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# coding=utf-8
 # Raspberry Pi Minecraft Block NFC Writer
 # Author: Tony DiCola
 # Copyright (c) 2015 Adafruit Industries

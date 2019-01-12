@@ -1,3 +1,4 @@
+# coding=utf-8
 import RPi.GPIO as GPIO
 from mcpi.minecraft import Minecraft
 

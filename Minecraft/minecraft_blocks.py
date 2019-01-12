@@ -1,3 +1,4 @@
+# coding=utf-8
 # Raspberry Pi Minecraft Block NFC Data
 # Author: Tony DiCola
 # Copyright (c) 2015 Adafruit Industries

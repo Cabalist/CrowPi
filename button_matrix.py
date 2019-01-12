@@ -11,7 +11,8 @@ import RPi.GPIO as GPIO
 # TODO BUG Buttons are mapped backwards
 # TODO Cleanup
 
-class ButtonMatrix():
+
+class ButtonMatrix(object):
 
     def __init__(self):
 

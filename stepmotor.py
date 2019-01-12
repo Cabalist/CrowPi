@@ -12,7 +12,7 @@ import time
 import RPi.GPIO as GPIO
 
 
-class Stepmotor:
+class Stepmotor(object):
 
     def __init__(self):
 
