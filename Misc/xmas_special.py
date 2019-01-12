@@ -45,7 +45,7 @@ def tone(pin, pitch, duration):
     if pitch == 0:
         delay(duration)
         return
-    p = GPIO.PWM(TONE_PIN, pitch)
+    p = GPIO.PWM(pin, pitch)
 
     # Change the duty-cycle to 50 if you wish
     p.start(30)
